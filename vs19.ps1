@@ -22,9 +22,11 @@ foreach ($project in $projects) {
 
 # Build libprotobuf
 cmd /c "devenv demoinfogo\protobuf-2.5.0\vsprojects\protobuf.sln /Build `"Release|Win32`" /Project libprotobuf"
+cmd /c "devenv demoinfogo\protobuf-2.5.0\vsprojects\protobuf.sln /Build `"Debug|Win32`" /Project libprotobuf"
 
 # Upgrade demoinfogo sln
 cmd /c "devenv demoinfogo\demoinfogo.sln /Upgrade"
 
 # Build demoinfogo
 cmd /c "devenv demoinfogo\demoinfogo.sln /Build `"Release|Win32`" /Project demoinfogo"
+cmd /c "devenv demoinfogo\demoinfogo.sln /Build `"Debug|Win32`" /Project demoinfogo"
